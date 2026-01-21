@@ -1,1 +1,42 @@
-console.log("Fallback code at Wed Jan 21 2026 21:32:03 GMT+0300 (East Africa Time)")
+Here's a short JavaScript snippet that logs the current date and time to the console:
+
+```javascript
+console.log(new Date());
+```
+
+**How it works:**
+
+1.  `new Date()`: This creates a new `Date` object, which by default represents the current date and time at the moment it's created.
+2.  `console.log()`: This function outputs the value of its argument to the browser's developer console or Node.js terminal. When a `Date` object is logged directly, it typically outputs a human-readable string representation of the date and time.
+
+**Example Output (will vary based on your locale and time):**
+
+```
+Wed Jul 24 2024 10:30:45 GMT-0700 (Pacific Daylight Time)
+```
+
+---
+
+**Bonus: If you want specific formats, here are a few options:**
+
+```javascript
+const now = new Date();
+
+// Default output (as above)
+console.log("Default:", now);
+
+// Just the date part (localized)
+console.log("Local Date:", now.toLocaleDateString());
+
+// Just the time part (localized)
+console.log("Local Time:", now.toLocaleTimeString());
+
+// Both date and time (localized)
+console.log("Local Date & Time:", now.toLocaleString());
+
+// ISO 8601 format (standardized, good for APIs)
+console.log("ISO Format:", now.toISOString());
+
+// UTC string
+console.log("UTC String:", now.toUTCString());
+```
